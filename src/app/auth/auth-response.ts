@@ -1,0 +1,10 @@
+// the response that will be returned from the authentication server
+export interface AuthResponse {
+    user: {
+        id: number,
+        name: string,
+        email: string,
+        access_token: string,
+        expires_in: number
+    };
+}
