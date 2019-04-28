@@ -1,9 +1,3 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
     <form #form="ngForm" (ngSubmit)="login(form)">
         <ion-grid>
@@ -14,7 +8,7 @@
                     </div>
                     <div padding>
                         <ion-item>
-                            <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+                            <ion-input name="email" type="email" placeholder="Login or Email" ngModel required></ion-input>
                         </ion-item>
                         <ion-item>
                             <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
@@ -25,9 +19,8 @@
                     </div>
                     
                     <div text-center>
-                        If you don't have an account, please <a routerLink='/register'>
-                            register
-                        </a> first!
+                            If you forgot your password, click <a routerLink='/register'>
+                                here</a>
                     </div>
                 </ion-col>
 
