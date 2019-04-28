@@ -22,7 +22,7 @@ export class AuthService {
 
     constructor(private httpClient: HttpClient, private storage: Storage) { }
 
-    // We send a POST request with HttpClient to the AUTH_SERVER_ADDRESS /login
+    // We send a POST request to the AUTH_SERVER_ADDRESS/login
     // Next, we perform a side effect using the pipe() method and tap() operator available from RxJS for persist the JWT access token
     // and expiration date returned from the server.
     login(user: User): Observable<AuthResponse> {
@@ -37,6 +37,7 @@ export class AuthService {
             })
         );
     }
+
     // logout method will be used for removing JWT authentication information from the local storage
     async logout() {
         await this.storage.remove('ACCESS_TOKEN');
